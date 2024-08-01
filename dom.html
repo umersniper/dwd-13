@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    div
+    {
+        border:solid 2px green;width:10%;height: 10vh;
+    }
+</style>
+</head>
+<body>
+<input type="text" id="t1"  style="">
+<input type="text" id="t2" >
+<input type="text" id="t3" >
+<input type="button" value="down" onclick="donw()">
+<div  id="d1"> d</div>
+<form action="array.html" onsubmit="return validate()">
+    <input type="submit">
+</form>
+<script>
+function validate()
+{
+    alert("hello")
+    return false;
+}
+    let t1=document.getElementById('t1');
+    let t2=document.getElementById('t2');
+    let d1=document.getElementById('d1');
+    let dow=0;
+    function donw()
+    {
+        dow=dow+10;
+        d1.style=`margin-top:${dow}px`;
+
+    }
+    function shwValue()
+    {
+        let val1=t1.value;
+        let val2=t2.value;
+        console.log(val1);
+        document.getElementById('t1').style=`background-color: ${val1};color:${val2}`;
+        // let val1=Number(document.getElementById('t1').value);
+        // let val2=Number(document.getElementById('t2').value);
+        // document.getElementById('t3').value=val1+val2;
+    }
+    function any()
+    {
+        let a="abc"
+        alert("hi"+a);
+    }
+</script>
+</body>
+</html>
